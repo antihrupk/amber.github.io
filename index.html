@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Янтарная Лавка - Калининградский янтарь</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .top-bar {
+            background: #171717;
+            color: white;
+            padding: 10px 15px;
+            font-size: 12px;
+            border-bottom: 1px solid rgba(129, 129, 120, 0.2);
+        }
+
+        .main-header {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff632b;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-bar {
+            background: #ff632b;
+            padding: 12px 15px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .products {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+            height: 40px;
+            overflow: hidden;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .product-price {
+            color: #e44d26;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .add-to-cart {
+            background: #ff632b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background: #e55a26;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 30px 15px;
+            gap: 8px;
+        }
+
+        .page-number {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .page-number.active {
+            background: #ff632b;
+            color: white;
+            border-color: #ff632b;
+        }
+
+        .footer {
+            background: #2b2b2b;
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <strong>КУПИТЬ УКРАШЕНИЯ ИЗ ЯНТАРЯ В САНКТ-ПЕТЕРБУРГЕ...</strong>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">Янтарная Лавка</div>
+            <div class="header-icons">
+                <a href="#" class="icon">👤</a>
+                <a href="#" class="icon">🛒</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="nav-menu">
+            <a href="#">Видео</a>
+            <a href="#">Статьи</a>
+            <a href="#">Контакты</a>
+            <a href="#">Помощь</a>
+            <a href="#">Опт</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="products">
+            <!-- Товар 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co/2YKp8vHz/IMG-20241008-115345-129.jpg" alt="Серьги из янтаря Ауравела">
+                </div>
+                <div class="product-title">Серьги из натурального янтаря "Ауравела"</div>
+                <div class="product-price">4 800 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Товар 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co/5gzJ01rs/IMG-20241008-115345-130.jpg" alt="Кулон из янтаря с серебряной оправой">
+                </div>
+                <div class="product-title">Кулон из янтаря с серебряной оправой</div>
+                <div class="product-price">2 500 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Товар 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co/PzGQ3f1B/IMG-20241008-115345-131.jpg" alt="Браслет из янтаря ручной работы">
+                </div>
+                <div class="product-title">Браслет из янтаря ручной работы</div>
+                <div class="product-price">3 200 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Товар 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co/mMmVL7c/IMG-20241008-115345-132.jpg" alt="Кольцо с янтарем и филигранью">
+                </div>
+                <div class="product-title">Кольцо с янтарем и филигранью</div>
+                <div class="product-price">2 900 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Товар 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co/HT9gy5nD/IMG-20241008-115345-133.jpg" alt="Бусы из натурального балтийского янтаря">
+                </div>
+                <div class="product-title">Бусы из натурального балтийского янтаря</div>
+                <div class="product-price">6 700 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Товар 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co/LdQgtNXK/IMG-20241008-115345-134.jpg" alt="Комплект украшений Нежность">
+                </div>
+                <div class="product-title">Комплект "Нежность" (серьги+кулон)</div>
+                <div class="product-price">8 900 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="page-number">1</a>
+            <a href="#" class="page-number active">2</a>
+            <a href="#" class="page-number">3</a>
+            <a href="#" class="page-number">→</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">О магазине</a>
+            <a href="#">Доставка и оплата</a>
+            <a href="#">Гарантия</a>
+            <a href="#">Отзывы</a>
+            <a href="#">Контакты</a>
+            <a href="#">Оптовым покупателям</a>
+        </div>
+        <div class="copyright">
+            © 2024 Янтарная Лавка. Все права защищены.<br>
+            Калининградский янтарь от производителя
+        </div>
+    </footer>
+</body>
+</html>
